@@ -1,0 +1,87 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:       #050505;
+  --gold:        #C5A46D;
+  --gold-light:  #F9F7F3;
+  --gold-dim:    rgba(197,164,109,0.12);
+  --white:       #FFFFFF;
+  --surface:     #0D0D0D;
+  --surface-2:   #141414;
+  --surface-3:   #1C1C1C;
+  --border:      rgba(255,255,255,0.07);
+  --text-1:      #F9F7F3;
+  --text-2:      #A09880;
+  --text-3:      #5C5448;
+  --success:     #4CAF7D;
+  --warning:     #E6B84A;
+  --danger:      #E05656;
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Poppins', sans-serif;
+  --sidebar-w:   240px;
+  --radius:      8px;
+  --shadow:      0 4px 24px rgba(0,0,0,0.4);
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--black);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-3); border-radius: 4px; }
+
+button { cursor: pointer; font-family: var(--font-body); }
+input, select, textarea { font-family: var(--font-body); }
+a { text-decoration: none; color: inherit; }
+
+/* ── Utility classes ────────────────────────────────────────────────────── */
+.text-gold    { color: var(--gold); }
+.text-muted   { color: var(--text-2); }
+.text-success { color: var(--success); }
+.text-danger  { color: var(--danger); }
+.text-warning { color: var(--warning); }
+
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 500; letter-spacing: 0.03em;
+}
+.badge-success  { background: rgba(76,175,125,0.15); color: var(--success); }
+.badge-danger   { background: rgba(224,86,86,0.15);  color: var(--danger); }
+.badge-warning  { background: rgba(230,184,74,0.15); color: var(--warning); }
+.badge-neutral  { background: var(--surface-3); color: var(--text-2); }
+.badge-gold     { background: var(--gold-dim); color: var(--gold); }
+
+/* ── Card ───────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+/* ── Animations ─────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(12px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.fade-up { animation: fadeUp 0.3s ease forwards; }
+
+/* ── Spinner ─────────────────────────────────────────────────────────────── */
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  display: inline-block;
+}

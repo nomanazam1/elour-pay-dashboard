@@ -1,0 +1,87 @@
+.refund-success {
+  background: rgba(76,175,125,0.12);
+  border: 1px solid rgba(76,175,125,0.3);
+  color: var(--success);
+  font-size: 13px;
+  padding: 11px 16px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+}
+
+/* ── Modal ──────────────────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(5,5,5,0.75);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+
+.modal-box {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%; max-width: 420px;
+  box-shadow: var(--shadow);
+  animation: fadeUp 0.22s ease;
+}
+
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 600;
+  color: var(--text-1);
+}
+
+.modal-close {
+  background: none; border: none;
+  color: var(--text-3); font-size: 20px;
+  transition: color 0.15s;
+}
+.modal-close:hover { color: var(--text-1); }
+
+.modal-form {
+  padding: 20px 24px 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.modal-error {
+  background: rgba(224,86,86,0.12);
+  border: 1px solid rgba(224,86,86,0.3);
+  color: var(--danger);
+  font-size: 13px; padding: 10px 14px; border-radius: 6px;
+}
+
+.modal-field { display: flex; flex-direction: column; gap: 6px; }
+
+.modal-field label {
+  font-size: 11px; font-weight: 600;
+  color: var(--text-2); letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+}
+
+.modal-field input, .modal-field textarea {
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 6px; padding: 10px 13px;
+  color: var(--text-1); font-size: 13px;
+  outline: none; transition: border-color 0.2s;
+  width: 100%;
+}
+.modal-field input:focus, .modal-field textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-dim);
+}
+.modal-field input::placeholder { color: var(--text-3); }
+
+.modal-actions {
+  display: flex; gap: 10px; justify-content: flex-end;
+  margin-top: 4px;
+}

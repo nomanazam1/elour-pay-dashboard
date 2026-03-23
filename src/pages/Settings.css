@@ -1,0 +1,78 @@
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.settings-section-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.settings-row:last-child { border-bottom: none; }
+
+.settings-label {
+  font-size: 12px;
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.settings-value {
+  font-size: 12px;
+  color: var(--text-1);
+  text-align: right;
+}
+
+.settings-value.mono { font-family: monospace; color: var(--text-2); }
+
+/* ── Danger zone ────────────────────────────────────────────────────────── */
+.settings-danger-zone {
+  background: var(--surface-2);
+  border: 1px solid rgba(224,86,86,0.2);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.danger-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--danger);
+  margin-bottom: 3px;
+}
+
+.danger-desc {
+  font-size: 12px;
+  color: var(--text-2);
+  flex: 1;
+}
+
+.danger-btn {
+  background: rgba(224,86,86,0.12);
+  border: 1px solid rgba(224,86,86,0.3);
+  color: var(--danger);
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+.danger-btn:hover { background: rgba(224,86,86,0.2); }
