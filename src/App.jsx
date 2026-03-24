@@ -8,6 +8,8 @@ import Orders   from './pages/Orders.jsx';
 import Analytics from './pages/Analytics.jsx';
 import Refunds  from './pages/Refunds.jsx';
 import Settings from './pages/Settings.jsx';
+import ElourDashboard from './pages/Elourpaydashboard';
+
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth();
@@ -17,6 +19,10 @@ function ProtectedRoute({ children }) {
     </div>
   );
   return user ? children : <Navigate to="/login" replace />;
+}
+
+export default function App() {
+  return <ElourDashboard />;
 }
 
 export default function App() {
